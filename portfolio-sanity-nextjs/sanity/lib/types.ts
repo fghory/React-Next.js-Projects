@@ -10,9 +10,34 @@ export type ProfileType = {
   };
   shortbio: string;
   email: string;
-  fullBio: PortableTextBlock[];
+  fullbio: PortableTextBlock[];
   location: string;
   resumeURL: string;
   sociallinks: string[];
   skills: string[];
+};
+
+export type JobType = {
+  _id: string;
+  name: string;
+  jobTitle: string;
+  logo: string;
+  url: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+};
+
+export type ProjectType = {
+  _id: string;
+  name: string;
+  slug: string;
+  tagline: string;
+  projectUrl: string;
+  logo: string;
+  coverImage: {
+    alt: string | null;
+    image: string;
+  };
+  description: PortableTextBlock[];
 };

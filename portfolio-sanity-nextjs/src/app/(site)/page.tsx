@@ -1,7 +1,8 @@
 import Link from "next/link";
-import { getProfile } from "../../sanity/lib/query";
-import type { ProfileType } from "../../sanity/lib/types";
+import { getProfile } from "../../../sanity/lib/query";
+import type { ProfileType } from "../../../sanity/lib/types";
 import HeroSvg from "@/components/hero-svg";
+import Job from "@/components/job";
 
 export default async function Home() {
   const profile: ProfileType[] = await getProfile();
@@ -38,6 +39,7 @@ export default async function Home() {
           ))}
         <HeroSvg />
       </section>
+      <Job />
     </main>
   );
 }
